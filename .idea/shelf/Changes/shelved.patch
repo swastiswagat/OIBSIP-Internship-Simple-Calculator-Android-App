@@ -1,0 +1,1647 @@
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1725901426501)
++++ b/.idea/vcs.xml	(date 1725901426501)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/test/java/com/example/calculator/ExampleUnitTest.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/test/java/com/example/calculator/ExampleUnitTest.kt b/app/src/test/java/com/example/calculator/ExampleUnitTest.kt
+new file mode 100644
+--- /dev/null	(date 1725113689143)
++++ b/app/src/test/java/com/example/calculator/ExampleUnitTest.kt	(date 1725113689143)
+@@ -0,0 +1,17 @@
++package com.example.calculator
++
++import org.junit.Test
++
++import org.junit.Assert.*
++
++/**
++ * Example local unit test, which will execute on the development machine (host).
++ *
++ * See [testing documentation](http://d.android.com/tools/testing).
++ */
++class ExampleUnitTest {
++    @Test
++    fun addition_isCorrect() {
++        assertEquals(4, 2 + 2)
++    }
++}
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+new file mode 100644
+--- /dev/null	(date 1725680840997)
++++ b/app/src/main/AndroidManifest.xml	(date 1725680840997)
+@@ -0,0 +1,26 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools">
++
++    <application
++        android:allowBackup="true"
++        android:dataExtractionRules="@xml/data_extraction_rules"
++        android:fullBackupContent="@xml/backup_rules"
++        android:icon="@drawable/calculatorbg"
++        android:label="@string/app_name"
++        android:roundIcon="@drawable/calculatorbg"
++        android:supportsRtl="true"
++        android:theme="@style/Theme.Calculator"
++        tools:targetApi="31">
++        <activity
++            android:name=".MainActivity"
++            android:exported="true">
++            <intent-filter>
++                <action android:name="android.intent.action.MAIN" />
++
++                <category android:name="android.intent.category.LAUNCHER" />
++            </intent-filter>
++        </activity>
++    </application>
++
++</manifest>
+\ No newline at end of file
+Index: app/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/.gitignore b/app/.gitignore
+new file mode 100644
+--- /dev/null	(date 1725113688294)
++++ b/app/.gitignore	(date 1725113688294)
+@@ -0,0 +1,1 @@
++/build
+\ No newline at end of file
+Index: app/src/androidTest/java/com/example/calculator/ExampleInstrumentedTest.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/androidTest/java/com/example/calculator/ExampleInstrumentedTest.kt b/app/src/androidTest/java/com/example/calculator/ExampleInstrumentedTest.kt
+new file mode 100644
+--- /dev/null	(date 1725113689174)
++++ b/app/src/androidTest/java/com/example/calculator/ExampleInstrumentedTest.kt	(date 1725113689174)
+@@ -0,0 +1,24 @@
++package com.example.calculator
++
++import androidx.test.platform.app.InstrumentationRegistry
++import androidx.test.ext.junit.runners.AndroidJUnit4
++
++import org.junit.Test
++import org.junit.runner.RunWith
++
++import org.junit.Assert.*
++
++/**
++ * Instrumented test, which will execute on an Android device.
++ *
++ * See [testing documentation](http://d.android.com/tools/testing).
++ */
++@RunWith(AndroidJUnit4::class)
++class ExampleInstrumentedTest {
++    @Test
++    fun useAppContext() {
++        // Context of the app under test.
++        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
++        assertEquals("com.example.calculator", appContext.packageName)
++    }
++}
+\ No newline at end of file
+Index: app/proguard-rules.pro
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/proguard-rules.pro b/app/proguard-rules.pro
+new file mode 100644
+--- /dev/null	(date 1725113688375)
++++ b/app/proguard-rules.pro	(date 1725113688375)
+@@ -0,0 +1,21 @@
++# Add project specific ProGuard rules here.
++# You can control the set of applied configuration files using the
++# proguardFiles setting in build.gradle.
++#
++# For more details, see
++#   http://developer.android.com/guide/developing/tools/proguard.html
++
++# If your project uses WebView with JS, uncomment the following
++# and specify the fully qualified class name to the JavaScript interface
++# class:
++#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
++#   public *;
++#}
++
++# Uncomment this to preserve the line number information for
++# debugging stack traces.
++#-keepattributes SourceFile,LineNumberTable
++
++# If you keep the line number information, uncomment this to
++# hide the original source file name.
++#-renamesourcefileattribute SourceFile
+\ No newline at end of file
+Index: app/src/main/res/drawable/button_background.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/button_background.xml b/app/src/main/res/drawable/button_background.xml
+new file mode 100644
+--- /dev/null	(date 1725678913056)
++++ b/app/src/main/res/drawable/button_background.xml	(date 1725678913056)
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++    <solid android:color="#FF6200EE"/>
++    <corners android:radius="0dp"/>
++</shape>
+Index: .idea/kotlinc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/kotlinc.xml b/.idea/kotlinc.xml
+new file mode 100644
+--- /dev/null	(date 1725113983902)
++++ b/.idea/kotlinc.xml	(date 1725113983902)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="KotlinJpsPluginSettings">
++    <option name="version" value="1.9.0" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml b/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+new file mode 100644
+--- /dev/null	(date 1725113689566)
++++ b/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(date 1725113689566)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
++    <background android:drawable="@drawable/ic_launcher_background" />
++    <foreground android:drawable="@drawable/ic_launcher_foreground" />
++    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
++</adaptive-icon>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+new file mode 100644
+--- /dev/null	(date 1725113689789)
++++ b/app/src/main/res/values/strings.xml	(date 1725113689789)
+@@ -0,0 +1,3 @@
++<resources>
++    <string name="app_name">calculator</string>
++</resources>
+\ No newline at end of file
+Index: app/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/themes.xml b/app/src/main/res/values/themes.xml
+new file mode 100644
+--- /dev/null	(date 1725113689648)
++++ b/app/src/main/res/values/themes.xml	(date 1725113689648)
+@@ -0,0 +1,9 @@
++<resources xmlns:tools="http://schemas.android.com/tools">
++    <!-- Base application theme. -->
++    <style name="Base.Theme.Calculator" parent="Theme.Material3.DayNight.NoActionBar">
++        <!-- Customize your light theme here. -->
++        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
++    </style>
++
++    <style name="Theme.Calculator" parent="Base.Theme.Calculator" />
++</resources>
+\ No newline at end of file
+Index: app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml b/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+new file mode 100644
+--- /dev/null	(date 1725113689189)
++++ b/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(date 1725113689189)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
++    <background android:drawable="@drawable/ic_launcher_background" />
++    <foreground android:drawable="@drawable/ic_launcher_foreground" />
++    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
++</adaptive-icon>
+\ No newline at end of file
+Index: app/src/main/res/drawable/ic_launcher_background.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_launcher_background.xml b/app/src/main/res/drawable/ic_launcher_background.xml
+new file mode 100644
+--- /dev/null	(date 1725113689519)
++++ b/app/src/main/res/drawable/ic_launcher_background.xml	(date 1725113689519)
+@@ -0,0 +1,170 @@
++<?xml version="1.0" encoding="utf-8"?>
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="108dp"
++    android:height="108dp"
++    android:viewportWidth="108"
++    android:viewportHeight="108">
++    <path
++        android:fillColor="#3DDC84"
++        android:pathData="M0,0h108v108h-108z" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M9,0L9,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,0L19,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M29,0L29,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M39,0L39,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M49,0L49,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M59,0L59,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M69,0L69,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M79,0L79,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M89,0L89,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M99,0L99,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,9L108,9"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,19L108,19"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,29L108,29"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,39L108,39"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,49L108,49"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,59L108,59"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,69L108,69"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,79L108,79"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,89L108,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,99L108,99"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,29L89,29"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,39L89,39"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,49L89,49"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,59L89,59"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,69L89,69"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,79L89,79"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M29,19L29,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M39,19L39,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M49,19L49,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M59,19L59,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M69,19L69,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M79,19L79,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++</vector>
+Index: app/src/main/res/drawable/ic_launcher_foreground.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_launcher_foreground.xml b/app/src/main/res/drawable/ic_launcher_foreground.xml
+new file mode 100644
+--- /dev/null	(date 1725113689552)
++++ b/app/src/main/res/drawable/ic_launcher_foreground.xml	(date 1725113689552)
+@@ -0,0 +1,30 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:aapt="http://schemas.android.com/aapt"
++    android:width="108dp"
++    android:height="108dp"
++    android:viewportWidth="108"
++    android:viewportHeight="108">
++    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
++        <aapt:attr name="android:fillColor">
++            <gradient
++                android:endX="85.84757"
++                android:endY="92.4963"
++                android:startX="42.9492"
++                android:startY="49.59793"
++                android:type="linear">
++                <item
++                    android:color="#44000000"
++                    android:offset="0.0" />
++                <item
++                    android:color="#00000000"
++                    android:offset="1.0" />
++            </gradient>
++        </aapt:attr>
++    </path>
++    <path
++        android:fillColor="#FFFFFF"
++        android:fillType="nonZero"
++        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
++        android:strokeWidth="1"
++        android:strokeColor="#00000000" />
++</vector>
+\ No newline at end of file
+Index: build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle.kts b/build.gradle.kts
+new file mode 100644
+--- /dev/null	(date 1725113688892)
++++ b/build.gradle.kts	(date 1725113688892)
+@@ -0,0 +1,5 @@
++// Top-level build file where you can add configuration options common to all sub-projects/modules.
++plugins {
++    alias(libs.plugins.android.application) apply false
++    alias(libs.plugins.kotlin.android) apply false
++}
+\ No newline at end of file
+Index: app/src/main/res/xml/backup_rules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/xml/backup_rules.xml b/app/src/main/res/xml/backup_rules.xml
+new file mode 100644
+--- /dev/null	(date 1725113689706)
++++ b/app/src/main/res/xml/backup_rules.xml	(date 1725113689706)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="utf-8"?><!--
++   Sample backup rules file; uncomment and customize as necessary.
++   See https://developer.android.com/guide/topics/data/autobackup
++   for details.
++   Note: This file is ignored for devices older that API 31
++   See https://developer.android.com/about/versions/12/backup-restore
++-->
++<full-backup-content>
++    <!--
++   <include domain="sharedpref" path="."/>
++   <exclude domain="sharedpref" path="device.xml"/>
++-->
++</full-backup-content>
+\ No newline at end of file
+Index: app/src/main/res/xml/data_extraction_rules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/xml/data_extraction_rules.xml b/app/src/main/res/xml/data_extraction_rules.xml
+new file mode 100644
+--- /dev/null	(date 1725113689706)
++++ b/app/src/main/res/xml/data_extraction_rules.xml	(date 1725113689706)
+@@ -0,0 +1,19 @@
++<?xml version="1.0" encoding="utf-8"?><!--
++   Sample data extraction rules file; uncomment and customize as necessary.
++   See https://developer.android.com/about/versions/12/backup-restore#xml-changes
++   for details.
++-->
++<data-extraction-rules>
++    <cloud-backup>
++        <!-- TODO: Use <include> and <exclude> to control what is backed up.
++        <include .../>
++        <exclude .../>
++        -->
++    </cloud-backup>
++    <!--
++    <device-transfer>
++        <include .../>
++        <exclude .../>
++    </device-transfer>
++    -->
++</data-extraction-rules>
+\ No newline at end of file
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(date 1725113687844)
++++ b/.gitignore	(date 1725113687844)
+@@ -0,0 +1,15 @@
++*.iml
++.gradle
++/local.properties
++/.idea/caches
++/.idea/libraries
++/.idea/modules.xml
++/.idea/workspace.xml
++/.idea/navEditor.xml
++/.idea/assetWizardSettings.xml
++.DS_Store
++/build
++/captures
++.externalNativeBuild
++.cxx
++local.properties
+Index: settings.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/settings.gradle.kts b/settings.gradle.kts
+new file mode 100644
+--- /dev/null	(date 1725113688670)
++++ b/settings.gradle.kts	(date 1725113688670)
+@@ -0,0 +1,24 @@
++pluginManagement {
++    repositories {
++        google {
++            content {
++                includeGroupByRegex("com\\.android.*")
++                includeGroupByRegex("com\\.google.*")
++                includeGroupByRegex("androidx.*")
++            }
++        }
++        mavenCentral()
++        gradlePluginPortal()
++    }
++}
++dependencyResolutionManagement {
++    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
++    repositories {
++        google()
++        mavenCentral()
++    }
++}
++
++rootProject.name = "calculator"
++include(":app")
++ 
+\ No newline at end of file
+Index: gradle.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/gradle.properties b/gradle.properties
+new file mode 100644
+--- /dev/null	(date 1725113688128)
++++ b/gradle.properties	(date 1725113688128)
+@@ -0,0 +1,23 @@
++# Project-wide Gradle settings.
++# IDE (e.g. Android Studio) users:
++# Gradle settings configured through the IDE *will override*
++# any settings specified in this file.
++# For more details on how to configure your build environment visit
++# http://www.gradle.org/docs/current/userguide/build_environment.html
++# Specifies the JVM arguments used for the daemon process.
++# The setting is particularly useful for tweaking memory settings.
++org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
++# When configured, Gradle will run in incubating parallel mode.
++# This option should only be used with decoupled projects. For more details, visit
++# https://developer.android.com/r/tools/gradle-multi-project-decoupled-projects
++# org.gradle.parallel=true
++# AndroidX package structure to make it clearer which packages are bundled with the
++# Android operating system, and which are packaged with your app's APK
++# https://developer.android.com/topic/libraries/support-library/androidx-rn
++android.useAndroidX=true
++# Kotlin code style for this project: "official" or "obsolete":
++kotlin.code.style=official
++# Enables namespacing of each library's R class so that its R class includes only the
++# resources declared in the library itself and none from the library's dependencies,
++# thereby reducing the size of the R class for that library
++android.nonTransitiveRClass=true
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+new file mode 100644
+--- /dev/null	(date 1725893064082)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1725893064082)
+@@ -0,0 +1,297 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/main"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:background="#F3E5F5"
++    tools:context=".MainActivity">
++
++    <ImageView
++        android:id="@+id/imageViewTop"
++        android:layout_width="wrap_content"
++        android:layout_height="150dp"
++        android:layout_marginTop="16dp"
++        android:src="@drawable/calculator"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        android:layout_margin="16dp"
++        tools:ignore="ContentDescription" />
++
++    <TextView
++        android:id="@+id/textViewResult"
++        android:layout_width="0dp"
++        android:layout_height="100dp"
++        android:background="#FCF5FD"
++        android:gravity="end|center_vertical"
++        android:padding="16dp"
++        android:text="0"
++        android:textSize="40sp"
++        android:textColor="#000"
++        app:layout_constraintTop_toBottomOf="@id/imageViewTop"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        android:layout_margin="16dp"
++        tools:ignore="HardcodedText" />
++
++    <Button
++        android:id="@+id/buttonClear"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:backgroundTint="#02A0B3"
++        android:text="C"
++        android:textColor="#fff"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/textViewResult"
++        app:layout_constraintWidth_percent="0.25"
++        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
++
++    <Button
++        android:id="@+id/buttonDivide"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:backgroundTint="#02A0B3"
++        android:text="/"
++        android:textColor="#fff"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toEndOf="@id/buttonClear"
++        app:layout_constraintTop_toBottomOf="@id/textViewResult"
++        app:layout_constraintWidth_percent="0.25"
++        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
++
++    <Button
++        android:id="@+id/buttonMultiply"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:backgroundTint="#02A0B3"
++        android:text="*"
++        android:textColor="#fff"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toEndOf="@id/buttonDivide"
++        app:layout_constraintTop_toBottomOf="@id/textViewResult"
++        app:layout_constraintWidth_percent="0.25"
++        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
++
++    <Button
++        android:id="@+id/buttonBackspace"
++        android:layout_width="74dp"
++        android:layout_height="70dp"
++        android:layout_margin="4dp"
++        android:backgroundTint="#02A0B3"
++        android:text="←"
++        android:textColor="#fff"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toEndOf="@id/buttonMultiply"
++        app:layout_constraintTop_toBottomOf="@id/textViewResult"
++        app:layout_constraintWidth_percent="0.25"
++        tools:ignore="HardcodedText,TextContrastCheck" />
++    <Button
++        android:id="@+id/button7"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:text="7"
++        android:backgroundTint="#3A2F2F"
++        android:textColor="#fff"
++        app:layout_constraintWidth_percent="0.25"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/buttonClear"
++        tools:ignore="HardcodedText,VisualLintButtonSize" />
++
++    <Button
++        android:id="@+id/button8"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:text="8"
++        android:backgroundTint="#3A2F2F"
++        android:textColor="#fff"
++        app:layout_constraintWidth_percent="0.25"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toEndOf="@id/button7"
++        app:layout_constraintTop_toBottomOf="@id/buttonClear"
++        tools:ignore="HardcodedText,VisualLintButtonSize" />
++
++    <Button
++        android:id="@+id/button9"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:text="9"
++        android:backgroundTint="#3A2F2F"
++        android:textColor="#fff"
++        app:layout_constraintWidth_percent="0.25"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toEndOf="@id/button8"
++        app:layout_constraintTop_toBottomOf="@id/buttonClear"
++        tools:ignore="HardcodedText,VisualLintButtonSize" />
++
++    <Button
++        android:id="@+id/buttonMinus"
++        android:layout_width="72dp"
++        android:layout_height="72dp"
++        android:layout_margin="4dp"
++        android:backgroundTint="#02A0B3"
++        android:text="-"
++        android:textColor="#fff"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toEndOf="@id/button9"
++        app:layout_constraintTop_toBottomOf="@id/buttonClear"
++        app:layout_constraintWidth_percent="0.25"
++        tools:ignore="HardcodedText,TextContrastCheck" />
++
++
++    <Button
++        android:id="@+id/button4"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:text="4"
++        android:backgroundTint="#3A2F2F"
++        android:textColor="#fff"
++        app:layout_constraintWidth_percent="0.25"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/button7"
++        tools:ignore="HardcodedText,VisualLintButtonSize" />
++
++    <Button
++        android:id="@+id/button5"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:text="5"
++        android:backgroundTint="#3A2F2F"
++        android:textColor="#fff"
++        app:layout_constraintWidth_percent="0.25"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toEndOf="@id/button4"
++        app:layout_constraintTop_toBottomOf="@id/button7"
++        tools:ignore="HardcodedText,VisualLintButtonSize" />
++
++    <Button
++        android:id="@+id/button6"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:text="6"
++        android:backgroundTint="#3A2F2F"
++        android:textColor="#fff"
++        app:layout_constraintWidth_percent="0.25"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toEndOf="@id/button5"
++        app:layout_constraintTop_toBottomOf="@id/button7"
++        tools:ignore="HardcodedText,VisualLintButtonSize" />
++
++    <Button
++        android:id="@+id/buttonPlus"
++        android:layout_width="68dp"
++        android:layout_height="69dp"
++        android:layout_margin="4dp"
++        android:backgroundTint="#02A1B4"
++        android:text="+"
++        android:textColor="#fff"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toEndOf="@id/button6"
++        app:layout_constraintTop_toBottomOf="@id/button7"
++        app:layout_constraintWidth_percent="0.25"
++        tools:ignore="HardcodedText,TextContrastCheck" />
++
++    <Button
++        android:id="@+id/button1"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:text="1"
++        android:backgroundTint="#3A2F2F"
++        android:textColor="#fff"
++        app:layout_constraintWidth_percent="0.25"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/button4"
++        tools:ignore="HardcodedText,VisualLintButtonSize" />
++
++    <Button
++        android:id="@+id/button2"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:text="2"
++        android:backgroundTint="#3A2F2F"
++        android:textColor="#fff"
++        app:layout_constraintWidth_percent="0.25"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toEndOf="@id/button1"
++        app:layout_constraintTop_toBottomOf="@id/button4"
++        tools:ignore="HardcodedText,VisualLintButtonSize" />
++
++    <Button
++        android:id="@+id/button3"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:text="3"
++        android:backgroundTint="#3A2F2F"
++        android:textColor="#fff"
++        app:layout_constraintWidth_percent="0.25"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toEndOf="@id/button2"
++        app:layout_constraintTop_toBottomOf="@id/button4"
++        tools:ignore="HardcodedText,VisualLintButtonSize" />
++
++    <Button
++        android:id="@+id/buttonEqual"
++        android:layout_width="57dp"
++        android:layout_height="149dp"
++        android:layout_margin="4dp"
++        android:layout_marginTop="4dp"
++        android:layout_marginEnd="20dp"
++        android:backgroundTint="#F68C8A"
++        android:text="="
++        android:textColor="#fff"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHeight_percent="0.2"
++        app:layout_constraintStart_toEndOf="@+id/button3"
++        app:layout_constraintTop_toBottomOf="@id/button5"
++        app:layout_constraintWidth_percent="0.5"
++        tools:ignore="HardcodedText,TextContrastCheck" />
++
++    <Button
++        android:id="@+id/button0"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:backgroundTint="#3A2F2F"
++        android:text="0"
++        android:textColor="#fff"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/button1"
++        app:layout_constraintWidth_percent="0.5"
++        tools:ignore="HardcodedText,DuplicateSpeakableTextCheck,VisualLintButtonSize" />
++
++    <Button
++        android:id="@+id/buttonDot"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_margin="4dp"
++        android:text="."
++        android:backgroundTint="#3A2F2F"
++        android:textColor="#fff"
++        app:layout_constraintWidth_percent="0.25"
++        app:layout_constraintHeight_percent="0.1"
++        app:layout_constraintStart_toEndOf="@id/button0"
++        app:layout_constraintTop_toBottomOf="@id/button1"
++        tools:ignore="HardcodedText,VisualLintButtonSize" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/colors.xml b/app/src/main/res/values/colors.xml
+new file mode 100644
+--- /dev/null	(date 1725113689675)
++++ b/app/src/main/res/values/colors.xml	(date 1725113689675)
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <color name="black">#FF000000</color>
++    <color name="white">#FFFFFFFF</color>
++</resources>
+\ No newline at end of file
+Index: app/src/main/res/values-night/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values-night/themes.xml b/app/src/main/res/values-night/themes.xml
+new file mode 100644
+--- /dev/null	(date 1725113689691)
++++ b/app/src/main/res/values-night/themes.xml	(date 1725113689691)
+@@ -0,0 +1,7 @@
++<resources xmlns:tools="http://schemas.android.com/tools">
++    <!-- Base application theme. -->
++    <style name="Base.Theme.Calculator" parent="Theme.Material3.DayNight.NoActionBar">
++        <!-- Customize your dark theme here. -->
++        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
++    </style>
++</resources>
+\ No newline at end of file
+Index: gradle/wrapper/gradle-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/gradle/wrapper/gradle-wrapper.properties b/gradle/wrapper/gradle-wrapper.properties
+new file mode 100644
+--- /dev/null	(date 1725113690046)
++++ b/gradle/wrapper/gradle-wrapper.properties	(date 1725113690046)
+@@ -0,0 +1,6 @@
++#Sat Aug 31 19:44:50 IST 2024
++distributionBase=GRADLE_USER_HOME
++distributionPath=wrapper/dists
++distributionUrl=https\://services.gradle.org/distributions/gradle-8.7-bin.zip
++zipStoreBase=GRADLE_USER_HOME
++zipStorePath=wrapper/dists
+Index: .idea/deploymentTargetSelector.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/deploymentTargetSelector.xml b/.idea/deploymentTargetSelector.xml
+new file mode 100644
+--- /dev/null	(date 1725114120430)
++++ b/.idea/deploymentTargetSelector.xml	(date 1725114120430)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="deploymentTargetSelector">
++    <selectionStates>
++      <SelectionState runConfigName="app">
++        <option name="selectionMode" value="DROPDOWN" />
++      </SelectionState>
++    </selectionStates>
++  </component>
++</project>
+\ No newline at end of file
+Index: gradlew
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/gradlew b/gradlew
+new file mode 100644
+--- /dev/null	(date 1725113687890)
++++ b/gradlew	(date 1725113687890)
+@@ -0,0 +1,185 @@
++#!/usr/bin/env sh
++
++#
++# Copyright 2015 the original author or authors.
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#      https://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++#
++
++##############################################################################
++##
++##  Gradle start up script for UN*X
++##
++##############################################################################
++
++# Attempt to set APP_HOME
++# Resolve links: $0 may be a link
++PRG="$0"
++# Need this for relative symlinks.
++while [ -h "$PRG" ] ; do
++    ls=`ls -ld "$PRG"`
++    link=`expr "$ls" : '.*-> \(.*\)$'`
++    if expr "$link" : '/.*' > /dev/null; then
++        PRG="$link"
++    else
++        PRG=`dirname "$PRG"`"/$link"
++    fi
++done
++SAVED="`pwd`"
++cd "`dirname \"$PRG\"`/" >/dev/null
++APP_HOME="`pwd -P`"
++cd "$SAVED" >/dev/null
++
++APP_NAME="Gradle"
++APP_BASE_NAME=`basename "$0"`
++
++# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
++DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
++
++# Use the maximum available, or set MAX_FD != -1 to use that value.
++MAX_FD="maximum"
++
++warn () {
++    echo "$*"
++}
++
++die () {
++    echo
++    echo "$*"
++    echo
++    exit 1
++}
++
++# OS specific support (must be 'true' or 'false').
++cygwin=false
++msys=false
++darwin=false
++nonstop=false
++case "`uname`" in
++  CYGWIN* )
++    cygwin=true
++    ;;
++  Darwin* )
++    darwin=true
++    ;;
++  MINGW* )
++    msys=true
++    ;;
++  NONSTOP* )
++    nonstop=true
++    ;;
++esac
++
++CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
++
++
++# Determine the Java command to use to start the JVM.
++if [ -n "$JAVA_HOME" ] ; then
++    if [ -x "$JAVA_HOME/jre/sh/java" ] ; then
++        # IBM's JDK on AIX uses strange locations for the executables
++        JAVACMD="$JAVA_HOME/jre/sh/java"
++    else
++        JAVACMD="$JAVA_HOME/bin/java"
++    fi
++    if [ ! -x "$JAVACMD" ] ; then
++        die "ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME
++
++Please set the JAVA_HOME variable in your environment to match the
++location of your Java installation."
++    fi
++else
++    JAVACMD="java"
++    which java >/dev/null 2>&1 || die "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
++
++Please set the JAVA_HOME variable in your environment to match the
++location of your Java installation."
++fi
++
++# Increase the maximum file descriptors if we can.
++if [ "$cygwin" = "false" -a "$darwin" = "false" -a "$nonstop" = "false" ] ; then
++    MAX_FD_LIMIT=`ulimit -H -n`
++    if [ $? -eq 0 ] ; then
++        if [ "$MAX_FD" = "maximum" -o "$MAX_FD" = "max" ] ; then
++            MAX_FD="$MAX_FD_LIMIT"
++        fi
++        ulimit -n $MAX_FD
++        if [ $? -ne 0 ] ; then
++            warn "Could not set maximum file descriptor limit: $MAX_FD"
++        fi
++    else
++        warn "Could not query maximum file descriptor limit: $MAX_FD_LIMIT"
++    fi
++fi
++
++# For Darwin, add options to specify how the application appears in the dock
++if $darwin; then
++    GRADLE_OPTS="$GRADLE_OPTS \"-Xdock:name=$APP_NAME\" \"-Xdock:icon=$APP_HOME/media/gradle.icns\""
++fi
++
++# For Cygwin or MSYS, switch paths to Windows format before running java
++if [ "$cygwin" = "true" -o "$msys" = "true" ] ; then
++    APP_HOME=`cygpath --path --mixed "$APP_HOME"`
++    CLASSPATH=`cygpath --path --mixed "$CLASSPATH"`
++
++    JAVACMD=`cygpath --unix "$JAVACMD"`
++
++    # We build the pattern for arguments to be converted via cygpath
++    ROOTDIRSRAW=`find -L / -maxdepth 1 -mindepth 1 -type d 2>/dev/null`
++    SEP=""
++    for dir in $ROOTDIRSRAW ; do
++        ROOTDIRS="$ROOTDIRS$SEP$dir"
++        SEP="|"
++    done
++    OURCYGPATTERN="(^($ROOTDIRS))"
++    # Add a user-defined pattern to the cygpath arguments
++    if [ "$GRADLE_CYGPATTERN" != "" ] ; then
++        OURCYGPATTERN="$OURCYGPATTERN|($GRADLE_CYGPATTERN)"
++    fi
++    # Now convert the arguments - kludge to limit ourselves to /bin/sh
++    i=0
++    for arg in "$@" ; do
++        CHECK=`echo "$arg"|egrep -c "$OURCYGPATTERN" -`
++        CHECK2=`echo "$arg"|egrep -c "^-"`                                 ### Determine if an option
++
++        if [ $CHECK -ne 0 ] && [ $CHECK2 -eq 0 ] ; then                    ### Added a condition
++            eval `echo args$i`=`cygpath --path --ignore --mixed "$arg"`
++        else
++            eval `echo args$i`="\"$arg\""
++        fi
++        i=`expr $i + 1`
++    done
++    case $i in
++        0) set -- ;;
++        1) set -- "$args0" ;;
++        2) set -- "$args0" "$args1" ;;
++        3) set -- "$args0" "$args1" "$args2" ;;
++        4) set -- "$args0" "$args1" "$args2" "$args3" ;;
++        5) set -- "$args0" "$args1" "$args2" "$args3" "$args4" ;;
++        6) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" ;;
++        7) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" ;;
++        8) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" "$args7" ;;
++        9) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" "$args7" "$args8" ;;
++    esac
++fi
++
++# Escape application args
++save () {
++    for i do printf %s\\n "$i" | sed "s/'/'\\\\''/g;1s/^/'/;\$s/\$/' \\\\/" ; done
++    echo " "
++}
++APP_ARGS=`save "$@"`
++
++# Collect all arguments for the java command, following the shell quoting and substitution rules
++eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS "\"-Dorg.gradle.appname=$APP_BASE_NAME\"" -classpath "\"$CLASSPATH\"" org.gradle.wrapper.GradleWrapperMain "$APP_ARGS"
++
++exec "$JAVACMD" "$@"
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1725113692527)
++++ b/.idea/.gitignore	(date 1725113692527)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: gradlew.bat
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/gradlew.bat b/gradlew.bat
+new file mode 100644
+--- /dev/null	(date 1725113687890)
++++ b/gradlew.bat	(date 1725113687890)
+@@ -0,0 +1,89 @@
++@rem
++@rem Copyright 2015 the original author or authors.
++@rem
++@rem Licensed under the Apache License, Version 2.0 (the "License");
++@rem you may not use this file except in compliance with the License.
++@rem You may obtain a copy of the License at
++@rem
++@rem      https://www.apache.org/licenses/LICENSE-2.0
++@rem
++@rem Unless required by applicable law or agreed to in writing, software
++@rem distributed under the License is distributed on an "AS IS" BASIS,
++@rem WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++@rem See the License for the specific language governing permissions and
++@rem limitations under the License.
++@rem
++
++@if "%DEBUG%" == "" @echo off
++@rem ##########################################################################
++@rem
++@rem  Gradle startup script for Windows
++@rem
++@rem ##########################################################################
++
++@rem Set local scope for the variables with windows NT shell
++if "%OS%"=="Windows_NT" setlocal
++
++set DIRNAME=%~dp0
++if "%DIRNAME%" == "" set DIRNAME=.
++set APP_BASE_NAME=%~n0
++set APP_HOME=%DIRNAME%
++
++@rem Resolve any "." and ".." in APP_HOME to make it shorter.
++for %%i in ("%APP_HOME%") do set APP_HOME=%%~fi
++
++@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
++set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m"
++
++@rem Find java.exe
++if defined JAVA_HOME goto findJavaFromJavaHome
++
++set JAVA_EXE=java.exe
++%JAVA_EXE% -version >NUL 2>&1
++if "%ERRORLEVEL%" == "0" goto execute
++
++echo.
++echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
++echo.
++echo Please set the JAVA_HOME variable in your environment to match the
++echo location of your Java installation.
++
++goto fail
++
++:findJavaFromJavaHome
++set JAVA_HOME=%JAVA_HOME:"=%
++set JAVA_EXE=%JAVA_HOME%/bin/java.exe
++
++if exist "%JAVA_EXE%" goto execute
++
++echo.
++echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME%
++echo.
++echo Please set the JAVA_HOME variable in your environment to match the
++echo location of your Java installation.
++
++goto fail
++
++:execute
++@rem Setup the command line
++
++set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
++
++
++@rem Execute Gradle
++"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %*
++
++:end
++@rem End local scope for the variables with windows NT shell
++if "%ERRORLEVEL%"=="0" goto mainEnd
++
++:fail
++rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of
++rem the _cmd.exe /c_ return code!
++if  not "" == "%GRADLE_EXIT_CONSOLE%" exit 1
++exit /b 1
++
++:mainEnd
++if "%OS%"=="Windows_NT" endlocal
++
++:omega
+Index: gradle/libs.versions.toml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/gradle/libs.versions.toml b/gradle/libs.versions.toml
+new file mode 100644
+--- /dev/null	(date 1725113689883)
++++ b/gradle/libs.versions.toml	(date 1725113689883)
+@@ -0,0 +1,26 @@
++[versions]
++agp = "8.6.0"
++kotlin = "1.9.0"
++coreKtx = "1.13.1"
++junit = "4.13.2"
++junitVersion = "1.2.1"
++espressoCore = "3.6.1"
++appcompat = "1.7.0"
++material = "1.12.0"
++activity = "1.9.1"
++constraintlayout = "2.1.4"
++
++[libraries]
++androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
++junit = { group = "junit", name = "junit", version.ref = "junit" }
++androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
++androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
++androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
++material = { group = "com.google.android.material", name = "material", version.ref = "material" }
++androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
++androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
++
++[plugins]
++android-application = { id = "com.android.application", version.ref = "agp" }
++kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
++
+Index: app/src/main/java/com/example/calculator/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/calculator/MainActivity.kt b/app/src/main/java/com/example/calculator/MainActivity.kt
+new file mode 100644
+--- /dev/null	(date 1725893064087)
++++ b/app/src/main/java/com/example/calculator/MainActivity.kt	(date 1725893064087)
+@@ -0,0 +1,121 @@
++package com.example.calculator
++
++import android.annotation.SuppressLint
++import android.os.Bundle
++import android.widget.Button
++import android.widget.TextView
++import android.widget.Toast
++import androidx.appcompat.app.AppCompatActivity
++import java.text.DecimalFormat
++
++class MainActivity : AppCompatActivity() {
++
++    private lateinit var resultTextView: TextView
++    private var currentInput = ""
++    private var operator: Char? = null
++    private var num1: Double? = null
++
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        setContentView(R.layout.activity_main)
++
++        resultTextView = findViewById(R.id.textViewResult)
++        val button0: Button = findViewById(R.id.button0)
++        val button1: Button = findViewById(R.id.button1)
++        val button2: Button = findViewById(R.id.button2)
++        val button3: Button = findViewById(R.id.button3)
++        val button4: Button = findViewById(R.id.button4)
++        val button5: Button = findViewById(R.id.button5)
++        val button6: Button = findViewById(R.id.button6)
++        val button7: Button = findViewById(R.id.button7)
++        val button8: Button = findViewById(R.id.button8)
++        val button9: Button = findViewById(R.id.button9)
++        val addButton: Button = findViewById(R.id.buttonPlus)
++        val subtractButton: Button = findViewById(R.id.buttonMinus)
++        val multiplyButton: Button = findViewById(R.id.buttonMultiply)
++        val divideButton: Button = findViewById(R.id.buttonDivide)
++        val equalButton: Button = findViewById(R.id.buttonEqual)
++        val clearButton: Button = findViewById(R.id.buttonClear)
++        val dotButton: Button = findViewById(R.id.buttonDot)
++        button0.setOnClickListener { appendToInput("0") }
++        button1.setOnClickListener { appendToInput("1") }
++        button2.setOnClickListener { appendToInput("2") }
++        button3.setOnClickListener { appendToInput("3") }
++        button4.setOnClickListener { appendToInput("4") }
++        button5.setOnClickListener { appendToInput("5") }
++        button6.setOnClickListener { appendToInput("6") }
++        button7.setOnClickListener { appendToInput("7") }
++        button8.setOnClickListener { appendToInput("8") }
++        button9.setOnClickListener { appendToInput("9") }
++        dotButton.setOnClickListener { appendToInput(".") }
++        addButton.setOnClickListener { setOperator('+') }
++        subtractButton.setOnClickListener { setOperator('-') }
++        multiplyButton.setOnClickListener { setOperator('*') }
++        divideButton.setOnClickListener { setOperator('/') }
++        equalButton.setOnClickListener { performCalculation() }
++        clearButton.setOnClickListener { clearInput() }
++    }
++
++    @SuppressLint("SetTextI18n")
++    private fun appendToInput(value: String) {
++        currentInput += value
++        resultTextView.text = currentInput
++    }
++
++    private fun setOperator(selectedOperator: Char) {
++        if (currentInput.isNotEmpty()) {
++            num1 = currentInput.toDoubleOrNull()
++            if (num1 != null) {
++                operator = selectedOperator
++                currentInput += " $operator "
++                resultTextView.text = currentInput
++            } else {
++                Toast.makeText(this, "Invalid input", Toast.LENGTH_SHORT).show()
++            }
++        }
++    }
++
++    @SuppressLint("SetTextI18n")
++    private fun performCalculation() {
++        val inputParts = currentInput.split(" ")
++        if (inputParts.size == 3) {
++            val num2 = inputParts[2].toDoubleOrNull()
++            if (num2 != null) {
++                var result = 0.0
++                when (operator) {
++                    '+' -> result = num1!! + num2
++                    '-' -> result = num1!! - num2
++                    '*' -> result = num1!! * num2
++                    '/' -> {
++                        if (num2 != 0.0) {
++                            result = num1!! / num2
++                        } else {
++                            Toast.makeText(this, "Cannot divide by zero", Toast.LENGTH_SHORT).show()
++                            return
++                        }
++                    }
++                }
++                val df = DecimalFormat("#.##")
++                resultTextView.text = "$currentInput = ${df.format(result)}"
++                clearInputAfterCalculation()
++            } else {
++                Toast.makeText(this, "Invalid input", Toast.LENGTH_SHORT).show()
++            }
++        } else {
++            Toast.makeText(this, "Invalid operation", Toast.LENGTH_SHORT).show()
++        }
++    }
++
++    private fun clearInput() {
++        currentInput = ""
++        num1 = null
++        operator = null
++        resultTextView.text = "0"
++    }
++
++    private fun clearInputAfterCalculation() {
++        currentInput = ""
++        num1 = null
++        operator = null
++    }
++}
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1725113709180)
++++ b/.idea/compiler.xml	(date 1725113709180)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel target="17" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+new file mode 100644
+--- /dev/null	(date 1725187058274)
++++ b/.idea/gradle.xml	(date 1725187058274)
+@@ -0,0 +1,19 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
++  <component name="GradleSettings">
++    <option name="linkedExternalProjectsSettings">
++      <GradleProjectSettings>
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
++        <option name="modules">
++          <set>
++            <option value="$PROJECT_DIR$" />
++            <option value="$PROJECT_DIR$/app" />
++          </set>
++        </option>
++        <option name="resolveExternalAnnotations" value="false" />
++      </GradleProjectSettings>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/migrations.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/migrations.xml b/.idea/migrations.xml
+new file mode 100644
+--- /dev/null	(date 1725113709192)
++++ b/.idea/migrations.xml	(date 1725113709192)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectMigrations">
++    <option name="MigrateToGradleLocalJavaHome">
++      <set>
++        <option value="$PROJECT_DIR$" />
++      </set>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: app/build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+new file mode 100644
+--- /dev/null	(date 1725113689931)
++++ b/app/build.gradle.kts	(date 1725113689931)
+@@ -0,0 +1,48 @@
++plugins {
++    alias(libs.plugins.android.application)
++    alias(libs.plugins.kotlin.android)
++}
++
++android {
++    namespace = "com.example.calculator"
++    compileSdk = 34
++
++    defaultConfig {
++        applicationId = "com.example.calculator"
++        minSdk = 24
++        targetSdk = 34
++        versionCode = 1
++        versionName = "1.0"
++
++        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
++    }
++
++    buildTypes {
++        release {
++            isMinifyEnabled = false
++            proguardFiles(
++                getDefaultProguardFile("proguard-android-optimize.txt"),
++                "proguard-rules.pro"
++            )
++        }
++    }
++    compileOptions {
++        sourceCompatibility = JavaVersion.VERSION_1_8
++        targetCompatibility = JavaVersion.VERSION_1_8
++    }
++    kotlinOptions {
++        jvmTarget = "1.8"
++    }
++}
++
++dependencies {
++
++    implementation(libs.androidx.core.ktx)
++    implementation(libs.androidx.appcompat)
++    implementation(libs.material)
++    implementation(libs.androidx.activity)
++    implementation(libs.androidx.constraintlayout)
++    testImplementation(libs.junit)
++    androidTestImplementation(libs.androidx.junit)
++    androidTestImplementation(libs.androidx.espresso.core)
++}
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1725113983902)
++++ b/.idea/misc.xml	(date 1725113983902)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/build/classes" />
++  </component>
++  <component name="ProjectType">
++    <option name="id" value="Android" />
++  </component>
++</project>
+\ No newline at end of file
