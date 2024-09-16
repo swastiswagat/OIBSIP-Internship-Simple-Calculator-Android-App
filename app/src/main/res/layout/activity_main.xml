@@ -10,30 +10,30 @@
 
     <ImageView
         android:id="@+id/imageViewTop"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_width="390dp"
+        android:layout_height="103dp"
+        android:layout_margin="16dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/calculator"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textViewResult"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_width="397dp"
+        android:layout_height="176dp"
+        android:layout_margin="10dp"
         android:background="#FCF5FD"
         android:gravity="end|center_vertical"
-        android:padding="16dp"
+        android:padding="10dp"
         android:text="0"
-        android:textSize="40sp"
         android:textColor="#000"
-        app:layout_constraintTop_toBottomOf="@id/imageViewTop"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewTop"
         tools:ignore="HardcodedText" />
 
     <Button

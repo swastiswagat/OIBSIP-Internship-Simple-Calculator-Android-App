@@ -23,7 +23,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6ca93c21-22f7-47ac-b24b-5074d7fdc5a7" name="Changes" comment="Final Project">
       <changelist_data name="Swasti" email="swagatswasti@gmail.com" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +89,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/swastiswagat/OIBSIP-Iternship-Android-App-Development.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/swastiswagat/OIBSIP-Internship-Android-App-Development.git&quot;,
     &quot;accountId&quot;: &quot;9d2c47ab-4f68-4917-822c-a57f458be654&quot;
   }
 }</component>
